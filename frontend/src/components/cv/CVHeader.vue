@@ -23,31 +23,29 @@ if (variant) {
             text="Munich, Germany"
             class="opacity-50 text-md mb-1"
           />
-          <div class="flex items-center gap-2 opacity-50">
-            <Icon name="passport" />
-            <span>EU Blue Card (valid until 2029)</span>
-          </div>
-          <SocialIcon name="mail" text="hgusic.pub@gmail.com" />
-          <SocialIcon name="phone" text="+49 151 29984107" />
-          <SocialIcon name="web" text="veracioux.me" />
-          <div class="flex gap-12">
-            <SocialIcon name="github" text="veracioux" />
-            <SocialIcon name="linkedin" text="veracioux" />
+          <SocialIcon name="mail" text="sabinagusic3@gmail.com" />
+          <SocialIcon name="phone" text="+387644229143" />
+          <SocialIcon v-if="false" name="web" text="veracioux.me" />
+          <div class="flex gap-8">
+            <SocialIcon name="github" text="sgusic1" />
+            <SocialIcon name="linkedin" text="Sabina" />
           </div>
         </div>
         <div class="flex flex-col justify-between gap-2">
-          <div class="name"></div>
-          <div class="text-md">
-            Versatile full-stack software engineer with 4 years of professional
-            experience delivering reliable, elegant solutions in web, SaaS and
-            IoT and 5+ more years of open source development. My strengths
-            include adaptability, simple design, strong debugging skills and a
-            keen eye for flaws and improvements. Experienced in various
-            programming languages, frameworks and paradigms. I'm passionate
-            about learning new technologies, improving my craft and contributing
-            to open source software.
+          <div>
+            Recent graduate in Electrical Engineering with a self-taught
+            foundation in software development. Although my formal education
+            focused on power systems, I pursued programming independently -
+            building a few full-stack projects, learning JavaScript and Python
+            amongst other technologies, and developing a foundation in general
+            principles in programming. Eager to join a collaborative team where
+            I can grow as a developer, bring a strong learning mindset, and
+            contribute meaningfully.
           </div>
-          <div class="inline-flex items-center gap-2 text-gray-500 leading-6">
+          <div
+            v-if="false"
+            class="inline-flex items-center gap-2 text-gray-500"
+          >
             <Icon name="info" />
             <span>
               An interactive online version of this resume is available
