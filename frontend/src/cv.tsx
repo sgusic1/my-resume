@@ -461,9 +461,18 @@ const _entries = {
       skills.linux,
       skills.bash,
     ],
-    labels: ["Backend", "Frontend", "Google Cloud"],
-    description: `Remade and extended the same app in Django to deepen
-      backend understanding.`,
+    labels: [
+      "Python",
+      "Django",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "HTML",
+      "CSS",
+    ],
+    description: `Developed a full library management site using Django REST Framework with a React + Vite + TypeScript frontend and PostgreSQL 
+      for data storage. Implemented user authentication (account creation, login, logout, password reset), role-based permissions, and complete form 
+      validation. Built CRUD interfaces for books and authors, with the React client communicating through REST APIs from the Django backend.`,
     group: groups.otherExperience,
   },
   opencode: {
