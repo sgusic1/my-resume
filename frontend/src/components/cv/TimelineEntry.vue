@@ -1,14 +1,19 @@
 <script setup lang="ts">
 import Label from "@/components/generic/Label.vue";
 import zindex from "@/zindex";
-import type { Entry } from "@/cv";
 
-defineProps<
-  Entry & {
-    active: boolean;
-    selected: boolean;
-  }
->();
+defineProps<{
+  name?: string;
+  node?: () => VNode;
+  startDate?: string | number;
+  endDate?: string | number;
+  displayDate?: string;
+  labels?: string[];
+  hovered?: boolean;
+  selected?: boolean;
+  active?: boolean;
+  description?: string;
+}>();
 </script>
 
 <template>
@@ -35,6 +40,9 @@ defineProps<
           <slot>
             <component v-if="node" :is="node" />
           </slot>
+          <p v-if="description" class="entryDescription">
+            {{ description }}
+          </p>
           <div v-if="labels" class="labelContainer">
             <Label :key="label" v-for="label of labels" :title="label"></Label>
           </div>

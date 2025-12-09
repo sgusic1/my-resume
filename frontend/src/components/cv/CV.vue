@@ -207,6 +207,7 @@ onMounted(() => {
                 <TimelineEntry
                   v-if="!entry.disabled"
                   v-bind="entry"
+                  :description="entry.description"
                   :hovered="hoveredEntry?.key === entry.key"
                   :selected="selectedEntry?.key === entry.key"
                   :active="selectedEntry?.key !== entry.key && !!entry.skills?.find(s => (s as Skill).key === (selectedSkill ?? hoveredSkill)?.key)"
