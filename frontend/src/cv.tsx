@@ -434,22 +434,22 @@ const _entries = {
         , one month internship
       </span>
     ),
-    startDate: "2021-12",
+    startDate: "2025",
     displayDate: "Dec 2021",
     skills: [skills.python, skills.django, skills.docker, skills.jetbrains],
     labels: ["Backend"],
     //group: groups.professionalExperience,
   },
-  personalWebsite: {
+  local_library_website: {
     node: () => (
       <span>
         <a href="https://github.com/veracioux/website" target="_blank">
-          <b>Personal website and webserver</b>
+          Local Library Website
         </a>
       </span>
     ),
-    startDate: "2021-11",
-    displayDate: "Nov 2021 - present",
+    startDate: "2025",
+    endDate: "present",
     skills: [
       skills.python,
       skills.django,
@@ -461,7 +461,9 @@ const _entries = {
       skills.linux,
       skills.bash,
     ],
-    labels: ["Backend", "Frontend", "Google Cloud", "Ansible", "IaC"],
+    labels: ["Backend", "Frontend", "Google Cloud"],
+    description: `Remade and extended the same app in Django to deepen
+      backend understanding.`,
     group: groups.otherExperience,
   },
   opencode: {
@@ -479,20 +481,20 @@ const _entries = {
     labels: ["Contributor", "SolidJS", "AI"],
     group: groups.otherExperience,
   },
-  flameshot: {
+  basic_library_website: {
     node: () => (
       <span>
         <a href="https://flameshot.org" target="_blank">
-          <b>Flameshot</b>
+          <b>Basic Library Website</b>
         </a>
-        , A Free & Open Source Screenshot Program <br />
       </span>
     ),
-    startDate: "Jul 2021",
-    endDate: "Sep 2023",
-    displayDate: "Jul 2021 - Sep 2023", // NOTE: Contains non-breaking spaces
+    startDate: "2025",
+    endDate: "present",
     skills: [skills.cpp, skills.qt, skills.git],
-    labels: ["Co-maintainer", "Developer", "Tester", "UI/UX Designer"],
+    description: `Developed a basic library website using Express.js, MongoDB and Pug, providing 
+      CRUD tools for managing books and authors alongside a user system with login and logout.`,
+    labels: ["Node.js", "Express", "MongoDB", "HTML", "JavaScript", "CSS"],
     group: groups.otherExperience,
     accomplishments: [
       "Led major refactors, solving long-standing bugs and pain points",
@@ -542,7 +544,7 @@ const _entries = {
     labels: ["Lead Engineer", "Lead Designer", "Lead Programmer"],
     group: groups.otherExperience,
   },
-  woodFall: {
+  moviestreaming: {
     node: () => (
       <span>
         <a href="https://github.com/veracioux/wood-fall" target="_blank">
@@ -554,8 +556,8 @@ const _entries = {
     endDate: "2022",
     // skills: ["C#", "Unity"],
     labels: ["C#", ".NET", "TMDB API", "OOP", "MVC"],
-    description:
-      "Built a movie streaming site using .NET MVC and the TMDB API.",
+    description: `Collaborated in a team of 3 to design and build a full-stack movie-streaming website, using C# and ASP.NET. Implemented role-based 
+    permissions (user, editor, admin), movie management tools and automated metadata retrieval via the TMDB API.`,
     group: groups.otherExperience,
   },
   renovation: {
