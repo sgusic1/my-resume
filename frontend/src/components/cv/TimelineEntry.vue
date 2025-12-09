@@ -13,6 +13,7 @@ defineProps<{
   hovered?: boolean;
   selected?: boolean;
   active?: boolean;
+  description?: string;
 }>();
 </script>
 
@@ -40,6 +41,9 @@ defineProps<{
           <slot>
             <component v-if="node" :is="node" />
           </slot>
+          <p v-if="description" class="entryDescription">
+            {{ description }}
+          </p>
           <div v-if="labels" class="labelContainer">
             <!-- TODO: Check if key is appropriate -->
             <Label

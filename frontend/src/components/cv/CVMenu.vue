@@ -30,7 +30,7 @@ function onToggleChanged(value: boolean) {
       <a
         v-if="variant"
         :href="`/documents/cv-${variant}.pdf`"
-        :download="`Haris_Gusic_${resume ? 'Resume' : 'CV'}.pdf`"
+        :download="`Sabina_Gusic_${resume ? 'Resume' : 'CV'}.pdf`"
         class="button"
       >
         <Icon name="download" class="icon" />

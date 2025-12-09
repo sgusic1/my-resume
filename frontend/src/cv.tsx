@@ -298,19 +298,19 @@ const _groups = {
     name: "Education",
     key: "education",
   },
-  professionalExperience: {
+  /*professionalExperience: {
     name: "Professional Experience",
     key: "professionalExperience",
-  },
+  },*/
   otherExperience: {
     name: "Other experience",
     key: "otherExperience",
   },
-  extraCurricular: {
+  /*extraCurricular: {
     name: "Extra-curricular",
     key: "extraCurricular",
     disabled: true,
-  },
+  },*/
 } as const satisfies Record<string, Group>;
 
 export const groups = _groups as Record<keyof typeof _groups, Group>;
@@ -346,7 +346,7 @@ const _entries = {
       _skills.iot,
     ],
     labels: ["IoT", "Frontend", "Backend"],
-    group: groups.professionalExperience,
+    //group: groups.professionalExperience,
   },
   evoltSoftwareEngineer: {
     node: () => (
@@ -375,7 +375,7 @@ const _entries = {
       _skills.microservices,
     ],
     labels: ["Backend", "Frontend", "Blockchain"],
-    group: groups.professionalExperience,
+    //group: groups.professionalExperience,
   },
   evoltInternship: {
     node: () => (
@@ -390,7 +390,7 @@ const _entries = {
     displayDate: "Dec 2021",
     skills: [skills.python, skills.django, skills.docker, skills.jetbrains],
     labels: ["Backend"],
-    group: groups.professionalExperience,
+    //group: groups.professionalExperience,
   },
   personalWebsite: {
     node: () => (
@@ -449,15 +449,22 @@ const _entries = {
   bachelor: {
     node: () => (
       <span>
-        <b>Bachelor of Electrical Engineering</b>, Automation and Electronics,
-        University&nbsp;of&nbsp;Sarajevo
+        <b>Bachelor of Electrical Engineering</b>, <br />
+        Department of Power Engineering, <br />
+        Faculty of Electrical Engineering, University&nbsp;of&nbsp;Sarajevo
         <br />
-        <pre>- GPA 9.19/10.00</pre>
       </span>
     ),
-    startDate: "2017",
-    endDate: "2020",
+    startDate: "2020",
+    endDate: "2024",
     group: groups.education,
+    labels: [
+      "C",
+      "C++",
+      "C#",
+      "Programming techniques",
+      "Object-oriented Analysis and Design",
+    ],
     skills: [skills.plc, skills.soMachine, skills.cpp],
   },
   rotatingLedDisplay: {
@@ -484,15 +491,16 @@ const _entries = {
     node: () => (
       <span>
         <a href="https://github.com/veracioux/wood-fall" target="_blank">
-          <b>Wood Fall</b>
+          <b>Movie Streaming Website</b>
         </a>
-        , video game, solo project
       </span>
     ),
-    startDate: "2016",
-    endDate: "2017",
+    startDate: "2021",
+    endDate: "2022",
     // skills: ["C#", "Unity"],
-    labels: ["Programmer", "Artist", "Sound Designer", "Publisher"],
+    labels: ["C#", ".NET", "TMDB API", "OOP", "MVC"],
+    description:
+      "Built a movie streaming site using .NET MVC and the TMDB API.",
     group: groups.otherExperience,
   },
   renovation: {
@@ -505,7 +513,7 @@ const _entries = {
     endDate: "2016-11",
     displayDate: "Mar - Nov 2016",
     labels: ["Participant", "Youth Leadership Program 2016"],
-    group: groups.extraCurricular,
+    //group: groups.extraCurricular,
   },
   demosPMS: {
     node: () => (
@@ -520,7 +528,7 @@ const _entries = {
     displayDate: "Mar - Jun 2021",
     skills: [skills.plc, skills.soMachine, skills.teaching],
     labels: ["PLC programming", "SoMachine"],
-    group: groups.professionalExperience,
+    //group: groups.professionalExperience,
   },
   elektromatik: {
     node: () => <span>Internship, Elektromatik d.o.o. Zenica</span>,
@@ -533,7 +541,7 @@ const _entries = {
       "Industrial sensors",
       "Industrial schematic design",
     ],
-    group: groups.professionalExperience,
+    //group: groups.professionalExperience,
   },
   demosTP: {
     node: () => (
@@ -548,7 +556,7 @@ const _entries = {
     displayDate: "Mar - Jun 2019",
     skills: [skills.cpp, skills.teaching],
     labels: ["C++"],
-    group: groups.professionalExperience,
+    //group: groups.professionalExperience,
   },
   stackExchange: {
     node: () => (
@@ -562,7 +570,7 @@ const _entries = {
     startDate: "2018",
     endDate: "present",
     skills: [skills.teaching],
-    group: groups.extraCurricular,
+    //group: groups.extraCurricular,
   },
   githubProjects: {
     node: () => (
