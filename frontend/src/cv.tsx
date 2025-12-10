@@ -28,6 +28,8 @@ import iconEthereum from "@/assets/icons/ethereum.svg";
 import iconSolana from "@/assets/icons/solana.svg";
 import iconJava from "@/assets/icons/java.svg";
 import iconCSharp from "@/assets/icons/csharp.svg";
+import iconHTML from "@/assets/icons/html.png";
+import iconCSS from "@/assets/icons/css.png";
 import type { JSX } from "vue/jsx-runtime";
 
 import type { Skill, SkillGroup } from "@/types";
@@ -62,63 +64,33 @@ export const skillGroups = _skillGroups as Record<
 >;
 
 const _skills = {
-  python: {
-    name: "Python",
-    icon: iconPython,
-    group: skillGroups.programmingLanguages,
-    experience: "5 years",
-  },
-  javascript: {
-    name: "JavaScript",
-    icon: iconJS,
-    group: skillGroups.programmingLanguages,
-    experience: "4 years",
-    disabled: true,
-  },
-  typescript: {
-    name: "TypeScript",
-    icon: iconTS,
-    group: skillGroups.programmingLanguages,
-    experience: "4 years",
-  },
-  nodejs: {
-    name: "Node.js",
-    icon: iconNodejs,
-    group: skillGroups.technologies,
-    experience: "4 years",
-  },
-  bash: {
-    name: "Bash",
-    icon: {
-      dark: iconBashDark,
-      light: iconBashLight,
-    },
-    group: skillGroups.programmingLanguages,
-    experience: "2 years",
-  },
   angular: {
     name: "Angular",
     icon: iconAngular,
     group: skillGroups.technologies,
     experience: "1 year",
+    disabled: true,
   },
   nestjs: {
     name: "NestJS",
     icon: iconNestJS,
     group: skillGroups.technologies,
     experience: "1 year",
+    disabled: true,
   },
   postgres: {
     name: "PostgreSQL",
     icon: iconPostgres,
     group: skillGroups.technologies,
     experience: "1 year",
+    disabled: true,
   },
   redis: {
     name: "Redis",
     icon: iconRedis,
     group: skillGroups.technologies,
     experience: "1 year",
+    disabled: true,
   },
   rabbitmq: {
     name: "RabbitMQ",
@@ -138,44 +110,96 @@ const _skills = {
     icon: iconGolang,
     group: skillGroups.programmingLanguages,
     experience: "6 months",
+    disabled: true,
   },
   vue: {
     name: "Vue.js",
     icon: iconVue,
     group: skillGroups.technologies,
     experience: "6 months",
+    disabled: true,
   },
   django: {
     name: "Django",
     icon: iconDjango,
     group: skillGroups.technologies,
-    disabled: true,
+    experience: "1 year",
   },
   c: {
     name: "C",
     icon: iconC,
     group: skillGroups.programmingLanguages,
-    experience: "1 year",
-    disabled: true,
+    experience: "Basic",
   },
   cpp: {
     name: "C++",
     icon: iconCpp,
     group: skillGroups.programmingLanguages,
-    experience: "3 years",
-    disabled: true,
+    experience: "Basic",
+  },
+  csharp: {
+    name: "C#",
+    icon: iconCSharp,
+    experience: "2 months",
+    group: skillGroups.programmingLanguages,
+  },
+  html: {
+    name: "HTML",
+    icon: iconHTML,
+    experience: "1 year",
+    group: skillGroups.programmingLanguages,
+  },
+  css: {
+    name: "CSS",
+    icon: iconCSS,
+    experience: "1 year",
+    group: skillGroups.programmingLanguages,
+  },
+  javascript: {
+    name: "JavaScript",
+    icon: iconJS,
+    group: skillGroups.programmingLanguages,
+    experience: "1 year",
+  },
+  python: {
+    name: "Python",
+    icon: iconPython,
+    group: skillGroups.programmingLanguages,
+    experience: "1 year",
+  },
+  typescript: {
+    name: "TypeScript",
+    icon: iconTS,
+    group: skillGroups.programmingLanguages,
+    experience: "3 months",
+  },
+  nodejs: {
+    name: "Node.js",
+    icon: iconNodejs,
+    group: skillGroups.technologies,
+    experience: "1 year",
+  },
+  bash: {
+    name: "Bash",
+    icon: {
+      dark: iconBashDark,
+      light: iconBashLight,
+    },
+    group: skillGroups.programmingLanguages,
+    experience: "Basic",
   },
   nginx: {
     name: "Nginx",
     icon: iconNginx,
     group: skillGroups.technologies,
     experience: "6 months",
+    disabled: true,
   },
   react: {
     name: "React",
     icon: iconReact,
     group: skillGroups.technologies,
-    experience: "1 year",
+    experience: "3 months",
   },
   qt: {
     name: "Qt",
@@ -188,13 +212,13 @@ const _skills = {
     name: "Docker",
     icon: iconDocker,
     group: skillGroups.otherTools,
-    experience: "1 year",
+    experience: "Basic",
   },
   git: {
     name: "Git",
     icon: iconGit,
     group: skillGroups.otherTools,
-    experience: "5 years",
+    experience: "1 year",
   },
   jetbrains: {
     name: "JetBrains",
@@ -207,7 +231,7 @@ const _skills = {
     name: "Linux",
     icon: iconLinux,
     group: skillGroups.otherTools,
-    experience: "5 years",
+    experience: "1 year",
   },
   emacs: {
     name: "Emacs",
@@ -269,11 +293,7 @@ const _skills = {
     group: skillGroups.programmingLanguages,
     disabled: true,
   },
-  csharp: {
-    name: "C#",
-    icon: iconCSharp,
-    group: skillGroups.stale,
-  } /*
+  /*
   teaching: {
     name: "Teaching",
     group: skillGroups.others,
@@ -283,7 +303,7 @@ const _skills = {
     name: "Technical writing",
     group: skillGroups.others,
     disabled: true,
-  },*/,
+  },*/
   ethereum: {
     name: "Ethereum",
     icon: iconEthereum,
@@ -359,15 +379,15 @@ const _entries = {
       _skills.python,
       _skills.javascript,
       _skills.java,
-      _skills.angular,
+      // _skills.angular,
       _skills.docker,
-      _skills.golang,
+      //  _skills.golang,
       _skills.git,
       _skills.jetbrains,
       _skills.linux,
-      _skills.nestjs,
-      _skills.postgres,
-      _skills.redis,
+      // _skills.nestjs,
+      //  _skills.postgres,
+      //  _skills.redis,
       /* _skills.restApi,
       _skills.saas,
       _skills.iot,*/
@@ -451,7 +471,7 @@ const _entries = {
       skills.typescript,
       skills.javascript,
       skills.docker,
-      skills.vue,
+      //skills.vue,
       skills.nginx,
       skills.linux,
       skills.bash,
@@ -466,8 +486,8 @@ const _entries = {
       "CSS",
     ],
     description: `Developed a full library management site using Django REST Framework with a React + Vite + TypeScript frontend and PostgreSQL 
-      for data storage. Implemented user authentication (account creation, login, logout, password reset), role-based permissions, and complete form 
-      validation. Built CRUD interfaces for books and authors, with the React client communicating through REST APIs from the Django backend.`,
+      for data storage. Implemented user authentication, role-based permissions, and complete form validation. Built CRUD interfaces for books 
+      and authors, with the React client communicating through REST APIs from the Django backend.`,
     group: groups.otherExperience,
   },
   cafe_finder: {

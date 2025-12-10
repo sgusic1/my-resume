@@ -11,13 +11,15 @@ const languages = [
     <h2 class="subsectionTitle">Languages</h2>
     <table class="languageTable">
       <tbody>
-        <tr v-for="(lang, i) in languages" :key="i">
-          <td>{{ lang.name }}</td>
-          <td
-            v-if="i === 0"
-            :rowspan="languages.length"
-            class="columnDelimiter"
-          ></td>
+        <tr>
+          <td>English</td>
+          <td rowspan="0" class="columnDelimiter"></td>
+          <td>
+            <b>Advanced</b>
+          </td>
+        </tr>
+        <tr>
+          <td>German</td>
           <td>
             <b>{{ lang.level }}</b>
           </td>
