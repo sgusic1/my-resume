@@ -45,10 +45,10 @@ const _skillGroups = {
     key: "otherTools",
     name: "Other Tools",
   },
-  others: {
+  /*others: {
     key: "others",
     name: "Others",
-  },
+  },*/
   stale: {
     key: "stale",
     name: "Stale",
@@ -215,7 +215,7 @@ const _skills = {
     group: skillGroups.otherTools,
     experience: "3 years",
     disabled: true,
-  },
+  } /*
   restApi: {
     name: "REST API",
     group: skillGroups.others,
@@ -261,11 +261,7 @@ const _skills = {
     name: "ABB VFDs (basic)",
     group: skillGroups.others,
     disabled: true,
-  },
-  eventDriven: {
-    name: "Event-driven architectures",
-    group: skillGroups.others,
-  },
+  },*/,
   java: {
     name: "Java",
     icon: iconJava,
@@ -277,7 +273,7 @@ const _skills = {
     name: "C#",
     icon: iconCSharp,
     group: skillGroups.stale,
-  },
+  } /*
   teaching: {
     name: "Teaching",
     group: skillGroups.others,
@@ -287,7 +283,7 @@ const _skills = {
     name: "Technical writing",
     group: skillGroups.others,
     disabled: true,
-  },
+  },*/,
   ethereum: {
     name: "Ethereum",
     icon: iconEthereum,
@@ -372,10 +368,9 @@ const _entries = {
       _skills.nestjs,
       _skills.postgres,
       _skills.redis,
-      _skills.kafka,
-      _skills.restApi,
+      /* _skills.restApi,
       _skills.saas,
-      _skills.iot,
+      _skills.iot,*/
     ],
     labels: [
       "SaaS",
@@ -419,8 +414,8 @@ const _entries = {
       _skills.jetbrains,
       _skills.docker,
       _skills.nodejs,
-      _skills.restApi,
-      _skills.microservices,
+      /* _skills.restApi,
+      _skills.microservices,*/
     ],
     labels: ["Backend", "Frontend", "Blockchain"],
     //group: groups.professionalExperience,
@@ -475,19 +470,26 @@ const _entries = {
       validation. Built CRUD interfaces for books and authors, with the React client communicating through REST APIs from the Django backend.`,
     group: groups.otherExperience,
   },
-  opencode: {
+  cafe_finder: {
     node: () => (
       <span>
         <a href="https://opencode.ai" target="_blank">
-          <b>OpenCode</b>
+          <b>Espresso</b>
         </a>
-        , Popular Open Source Terminal AI Agent
       </span>
     ),
     startDate: "2025-10",
     displayDate: "Oct 2025 - present",
+    description: `Built a café finder app with React, Vite and TypeScript. Used the Geolocation and Google Places APIs to show nearby cafés. 
+      Added favorites with localStorage caching, an Express proxy for API requests, and styled the UI with Tailwind CSS.`,
     skills: [skills.typescript, skills.git],
-    labels: ["Contributor", "SolidJS", "AI"],
+    labels: [
+      "React",
+      "TypeScript",
+      "Geolocation API",
+      "Google Places API",
+      "Tailwind CSS",
+    ],
     group: groups.otherExperience,
   },
   basic_library_website: {
@@ -531,7 +533,7 @@ const _entries = {
       "Programming techniques",
       "Object-oriented Analysis and Design",
     ],
-    skills: [skills.plc, skills.soMachine, skills.cpp],
+    //skills: [skills.plc, skills.soMachine, skills.cpp],
   },
   rotatingLedDisplay: {
     node: () => (
@@ -592,7 +594,7 @@ const _entries = {
     startDate: "2021-03",
     endDate: "2021-06",
     displayDate: "Mar - Jun 2021",
-    skills: [skills.plc, skills.soMachine, skills.teaching],
+    // skills: [skills.plc, skills.soMachine, skills.teaching],
     labels: ["PLC programming", "SoMachine"],
     //group: groups.professionalExperience,
   },
@@ -601,7 +603,7 @@ const _entries = {
     startDate: "2019",
     endDate: "2020",
     displayDate: "Summer 2019, Summer 2020",
-    skills: [skills.plc, skills.tiaPortal, skills.abbVFD],
+    //skills: [skills.plc, skills.tiaPortal, skills.abbVFD],
     labels: [
       "PLC programming",
       "Industrial sensors",
@@ -620,7 +622,7 @@ const _entries = {
     startDate: "2019-03",
     endDate: "2019-06",
     displayDate: "Mar - Jun 2019",
-    skills: [skills.cpp, skills.teaching],
+    // skills: [skills.cpp, skills.teaching],
     labels: ["C++"],
     //group: groups.professionalExperience,
   },
@@ -635,7 +637,7 @@ const _entries = {
     ),
     startDate: "2018",
     endDate: "present",
-    skills: [skills.teaching],
+    //skills: [skills.teaching],
     //group: groups.extraCurricular,
   },
   githubProjects: {
@@ -663,7 +665,7 @@ const _entries = {
       skills.django,
       skills.qt,
       skills.bash,
-      skills.technicalWriting,
+      //skills.technicalWriting,
       skills.emacs,
     ],
     group: groups.otherExperience,
