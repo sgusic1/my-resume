@@ -62,44 +62,49 @@ function getIcon(skill: Skill, variant: "dark" | "light"): string {
       <template v-if="!group.disabled">
         <h3>{{ group.name }}</h3>
         <div class="labelContainer">
-          <span
+          <template
             v-for="skill of Object.values(skills).filter(
               (skill) => skill.group === group && !skill.disabled
             )"
-            v-bind:key="skill.key"
-            :class="[
-              'skill',
-              { active: isActive(skill), selected: isSelected(skill) },
-            ]"
-            @mouseover="emit('hoverSkill', skill)"
-            @mouseleave="emit('leaveSkill')"
-            @click.stop="emit('selectSkill', skill)"
+            :key="skill.key"
           >
-            <template v-if="skill.icon">
-              <Icon
-                :src="getIcon(skill, 'light')"
-                :alt="skill.name"
-                :title="skill.name"
-                :class="`icon no-print ${extraClasses[skill.key as keyof typeof skills] ?? ''}`"
-              />
-              <Icon
-                :src="getIcon(skill, 'dark')"
-                :alt="skill.name"
-                :title="skill.name"
-                :class="`icon only-print ${extraClasses[skill.key as keyof typeof skills] ?? ''}`"
-              />
-              <span class="text-sm print:text-[0.7rem] leading-[0.65rem]">
-                {{ skill.name }}
-              </span>
-            </template>
-            <Label v-else :title="skill.name"></Label>
             <span
-              v-if="skill.experience && showExperience"
-              class="experience only-print"
+              :class="[
+                'skill',
+                { active: isActive(skill), selected: isSelected(skill) },
+              ]"
+              @mouseover="emit('hoverSkill', skill)"
+              @mouseleave="emit('leaveSkill')"
+              @click.stop="emit('selectSkill', skill)"
             >
-              {{ skill.experience }}
+              <template v-if="skill.icon">
+                <Icon
+                  :src="getIcon(skill, 'light')"
+                  :alt="skill.name"
+                  :title="skill.name"
+                  :class="`icon no-print ${extraClasses[skill.key as keyof typeof skills] ?? ''}`"
+                />
+                <Icon
+                  :src="getIcon(skill, 'dark')"
+                  :alt="skill.name"
+                  :title="skill.name"
+                  :class="`icon only-print ${extraClasses[skill.key as keyof typeof skills] ?? ''}`"
+                />
+                <span class="text-sm print:text-[0.7rem] leading-[0.65rem]">
+                  {{ skill.name }}
+                </span>
+                <span v-if="skill.experience" class="experience">
+                  {{ skill.experience }}
+                </span>
+              </template>
+
+              <Label v-else :title="skill.name" />
             </span>
-          </span>
+
+            <span v-if="skill.key === 'csharp'" class="row-break"></span>
+            <span v-if="skill.key === 'javascript'" class="row-break"></span>
+            <span v-if="skill.key === 'typescript'" class="row-break"></span>
+          </template>
         </div>
       </template>
     </template>
@@ -186,6 +191,11 @@ function getIcon(skill: Skill, variant: "dark" | "light"): string {
 
   .experience {
     font-size: 0.7em;
+    color: #2e2c2cff; // subtle gray
+    font-weight: 400;
+    line-height: 1.1;
+    margin-top: -4px; // closer to the name (adjust if needed)
+    text-align: center;
   }
 }
 
@@ -253,5 +263,14 @@ number, not as a percentage)
 
 .iconNginx {
   @include scaledIcon(1.8);
+}
+
+template {
+  display: contents; /* prevents flex layout issues */
+}
+
+.row-break {
+  flex-basis: 100%;
+  height: 0;
 }
 </style>

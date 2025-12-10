@@ -255,8 +255,10 @@ onMounted(() => {
           @hoverSkill="onHoverSkill"
           @leaveSkill="onLeaveSkill"
           @selectSkill="onToggleSelectSkill"
+          class="skillsPane"
         />
-        <LanguagesPane />
+        <div class="print-spacer"></div>
+        <LanguagesPane class="languagesPane" />
       </aside>
     </div>
   </div>
@@ -294,6 +296,12 @@ $colorDimText: rgba(var(--color-text-rgb), 0.7);
 
     @media print {
       align-items: stretch;
+      .languagesPane {
+        margin-top: 83px; // tweak this value until it visually aligns
+      }
+      .skillsPane {
+        padding-bottom: 30px;
+      }
     }
 
     .timelineWrapper {

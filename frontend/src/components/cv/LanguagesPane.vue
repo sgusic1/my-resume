@@ -13,12 +13,6 @@
         <tr>
           <td>German</td>
           <td>
-            <b>Advanced</b>
-          </td>
-        </tr>
-        <tr>
-          <td>Spanish</td>
-          <td>
             <b>Intermediate</b>
           </td>
         </tr>
