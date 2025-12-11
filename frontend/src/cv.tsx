@@ -17,7 +17,7 @@ import iconGolang from "@/assets/icons/golang.svg";
 import iconNestJS from "@/assets/icons/nestjs.svg";
 import iconVue from "@/assets/icons/vue.svg";
 import iconDjango from "@/assets/icons/django.svg";
-import iconDocker from "@/assets/icons/docker.svg";
+import iconDocker from "@/assets/icons/docker-logo.svg";
 import iconLinux from "@/assets/icons/linux.svg";
 import iconGit from "@/assets/icons/git-with-text.svg";
 import iconJetBrains from "@/assets/icons/jetbrains.svg";
@@ -486,7 +486,7 @@ const _entries = {
       "CSS",
     ],
     description: `Developed a full library management site using Django REST Framework with a React + Vite + TypeScript frontend and PostgreSQL 
-      for data storage. Implemented user authentication, role-based permissions, and complete form validation. Built CRUD interfaces for books 
+      for data storage. Implemented user authentication, role-based permissions and complete form validation. Built CRUD interfaces for books 
       and authors, with the React client communicating through REST APIs from the Django backend.`,
     group: groups.otherExperience,
   },
