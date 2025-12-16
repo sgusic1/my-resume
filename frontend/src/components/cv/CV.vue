@@ -305,7 +305,7 @@ main {
     @media print {
       align-items: stretch;
       .languagesPane {
-        margin-top: 83px; // tweak this value until it visually aligns
+        margin-top: 9px;
       }
       .skillsPane {
         padding-bottom: 30px;

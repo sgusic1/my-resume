@@ -102,7 +102,8 @@ function getIcon(skill: Skill, variant: "dark" | "light"): string {
             </span>
 
             <span v-if="skill.key === 'csharp'" class="row-break"></span>
-            <span v-if="skill.key === 'javascript'" class="row-break"></span>
+            <span v-if="skill.key === 'css'" class="row-break"></span>
+            <span v-if="skill.key === 'python'" class="row-break"></span>
             <span v-if="skill.key === 'typescript'" class="row-break"></span>
           </template>
         </div>
@@ -191,10 +192,10 @@ function getIcon(skill: Skill, variant: "dark" | "light"): string {
 
   .experience {
     font-size: 0.7em;
-    color: #2e2c2cff; // subtle gray
+    color: #2e2c2cff;
     font-weight: 400;
     line-height: 1.1;
-    margin-top: -4px; // closer to the name (adjust if needed)
+    margin-top: -4px;
     text-align: center;
   }
 }

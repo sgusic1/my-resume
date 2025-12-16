@@ -130,17 +130,19 @@ const _skills = {
     icon: iconC,
     group: skillGroups.programmingLanguages,
     experience: "Basic",
+    disabled: true,
   },
   cpp: {
     name: "C++",
     icon: iconCpp,
     group: skillGroups.programmingLanguages,
     experience: "Basic",
+    disabled: true,
   },
   csharp: {
     name: "C#",
     icon: iconCSharp,
-    experience: "2 months",
+    experience: "3 months",
     group: skillGroups.programmingLanguages,
   },
   html: {
@@ -155,15 +157,15 @@ const _skills = {
     experience: "1 year",
     group: skillGroups.programmingLanguages,
   },
-  javascript: {
-    name: "JavaScript",
-    icon: iconJS,
-    group: skillGroups.programmingLanguages,
-    experience: "1 year",
-  },
   python: {
     name: "Python",
     icon: iconPython,
+    group: skillGroups.programmingLanguages,
+    experience: "1 year",
+  },
+  javascript: {
+    name: "JavaScript",
+    icon: iconJS,
     group: skillGroups.programmingLanguages,
     experience: "1 year",
   },
@@ -487,7 +489,7 @@ const _entries = {
     ],
     description: `Developed a full library management site using Django REST Framework with a React + Vite + TypeScript frontend and PostgreSQL 
       for data storage. Implemented user authentication, role-based permissions and complete form validation. Built CRUD interfaces for books 
-      and authors, with the React client communicating through REST APIs from the Django backend.`,
+      and authors with the React client communicating through REST APIs from the Django backend.`,
     group: groups.otherExperience,
   },
   cafe_finder: {
@@ -588,7 +590,7 @@ const _entries = {
     // skills: ["C#", "Unity"],
     labels: ["C#", ".NET", "TMDB API", "OOP", "MVC"],
     description: `Collaborated in a team of 3 to design and build a full-stack movie-streaming website, using C# and ASP.NET. Implemented role-based 
-    permissions (user, editor, admin), movie management tools and automated metadata retrieval via the TMDB API.`,
+    permissions, movie management tools and automated metadata retrieval via the TMDB API.`,
     group: groups.otherExperience,
   },
   renovation: {
