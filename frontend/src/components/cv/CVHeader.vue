@@ -2,7 +2,6 @@
 import SocialIcon from "@/components/generic/SocialIcon.vue";
 import Icon from "@/components/generic/Icon.vue";
 import { CvContext } from "@/inject";
-import myAvatar from "@/assets/me.png";
 
 const { variant } = CvContext.inject();
 
